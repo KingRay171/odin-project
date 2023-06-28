@@ -1,0 +1,31 @@
+* {
+    background-color: black;
+}
+
+.title {
+    color: goldenrod;
+    text-align: center;
+}
+
+.description {
+    color: white;
+    font-weight: bold;
+}
+
+.ingredients {
+    color: lightblue;
+    text-align: center;
+}
+
+.ing-list {
+    color: white;
+}
+
+.steps {
+    color: lightblue;
+    text-align: center;
+}
+
+.steps-list {
+    color: white;
+}
