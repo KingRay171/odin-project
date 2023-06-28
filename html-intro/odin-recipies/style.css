@@ -1,4 +1,36 @@
 * {
     background-color: black;
+    
+}
+
+h1 {
+    text-align: center;
     color: white;
 }
+
+div {
+    background-color: white;
+    color: transparent;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    margin: 18px;
+    border: 3px solid white;
+
+}
+
+a {
+    position: absolute;
+    left: 35%;
+    bottom: 45%;
+    color: white;
+    background-color: transparent;
+    font-size: 36px;
+}
+
+img {
+    object-fit: cover;
+    width: 1800px;
+    margin-top: -350px;
+}
+
