@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.scoreboard {
+    display: flex;
+    gap: 38px;
+}
+
+.player-score, .computer-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.player-label, .computer-label {
+    text-align: center;
+    
+
+}
