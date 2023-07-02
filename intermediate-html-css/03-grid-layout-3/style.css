@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  max-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  display: grid;
+  grid-template: .25fr .05fr 2.5fr .05fr / 1fr 4fr;
+  grid-template-areas: "header header" "sidebar nav" "sidebar article" "footer footer";
+  gap: 4px;
+  height: 100%;
+}
+
+.container div {
+  padding: 15px;
+  font-size: 32px;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: white;
+}
+
+.header {
+  background-color: #393f4d;
+  display: grid;
+  grid-template-rows: 2fr 3fr;
+  grid-template-areas: "logo menu";
+  grid-area: header;
+  height: 50px;
+}
+
+.logo {
+  grid-area: logo;
+  text-align: left;
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.menu-item {
+  display: inline;
+}
+
+.menu ul,
+.menu li {
+  font-size: 16px;
+}
+
+.sidebar {
+  background-color: #C50208;
+  grid-area: sidebar;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 50px;
+}
+
+.sidebar .photo {
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 10px;
+}
+
+
+.sidebar .side-content {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.nav {
+  background-color: #C50208;
+  grid-area: nav;
+  
+
+}
+
+.nav ul li {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.nav-item {
+  display: inline;
+}
+
+.article {
+  background-color: #bccbde;
+  grid-area: article;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.article p {
+  font-size: 18px;
+  font-family: sans-serif;
+  color: white;
+  text-align: left;
+}
+
+.article .card {
+  background-color: #FFFFFF;
+  color: black;
+  text-align: center;
+  height: 200px;
+}
+
+.card p {
+  color: black;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.card .title {
+  font-size: 18px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #393f4d;
+  grid-area: footer;
+}
+
+.footer p {
+  font-size: 13px;
+  font-weight: normal;
+}
