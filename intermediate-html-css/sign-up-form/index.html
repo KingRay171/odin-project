@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="left">
+        <div class="text-logo">
+            <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png">
+            <h1>ODIN</h1>
+        </div>
+    </div>
+    <div class="right">
+        <div class="title">
+            <h1>
+                This is not a real online service!
+            </h1>
+        </div>
+        <form action="#">
+            <div>
+                
+                <p>Let's do this!</p>
+                <div class="form">
+                <div class="first-name">
+                    <label for="first-name">First Name</label>
+                    <input id="first-name" type="text" name="first-name" required>
+                </div>
+
+                <div class="last-name">
+                    <label for="last-name">Last Name</label>
+                    <input id="last-name" type="text" name="last-name" required>
+                </div>
+
+                <div class="email">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" required>
+                </div>
+
+                <div class="phone">
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" type="text" name="phone" minlength="10" maxlength="10" required>
+                </div>
+
+                <div class="password">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" required>
+                </div>
+
+                <div class="confirm">
+                    <label for="confirm">Confirm Password</label>
+                    <input id="confirm" type="password" name="confirm" required>
+                </div>
+                </div>
+            </div>
+            <div class="submit">
+                <button>Create Account</button>
+            </div>
+
+            
+        </form>
+        <div class="login">
+            Already have an account?
+            <a href="#">Log in</a>
+        </div>
+
+    </div>
+    
+</body>
+</html>
