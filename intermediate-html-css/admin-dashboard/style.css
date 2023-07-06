@@ -1,0 +1,361 @@
+* {
+    font-family: "Roboto";
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: grid;
+    grid-template: 1fr 3fr / 1fr 3fr;
+    grid-template-areas: "sidebar header" "sidebar main";
+}
+
+.dashboard img {
+    width: 50px;
+    height: auto;
+
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #1992d4;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 10px;
+}
+
+.sidebar * div {
+    display: flex;
+}
+
+.nav, .misc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.nav * {
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav * h5 {
+    display: flex;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nav img {
+    width: 30px;
+    height: auto;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    box-shadow: 2px 2px 10px #111;
+}
+
+.header .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.header .top .left {
+    display: flex;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+.header .top .right {
+    display: flex;
+    padding-top: 10px;
+    padding-right: 30px;
+    gap: 20px;
+}
+
+.header .top * img {
+    width: 30px;
+    
+}
+
+input {
+    border-radius: 20px;
+    border: 0px;
+    background-color: #e2e8f0;
+}
+
+.pfp-one {
+    border-radius: 80px;
+    border: 1px solid black;
+    word-wrap: normal;
+    height: 40px;
+    width: 40px;
+    font-size: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.name {
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.bottom .left {
+    display: flex;
+    padding-left: 30px;
+    padding-top: 10px;
+    gap: 18px;
+    
+}
+
+.bottom .right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-right: 30px;
+
+}
+
+.bottom .right * {
+    background-color: #1992d4;
+    color: white;
+    border: 0px;
+    border-radius: 18px;
+    width: 90px;
+    height: 32px;
+
+}
+
+.greeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.greeting * {
+    margin: 0px;
+}
+
+.pfp-two {
+    border: 1px solid black;
+    border-radius: 30px;
+    min-width: 60px;
+    min-height: 60px;
+    max-width: 60px;
+    max-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 8px;
+
+}
+
+.main {
+    grid-area: main;
+    background-color: #e2e8f0;
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template-areas: "projects announcements" "projects trending";
+
+}
+
+.projects {
+    grid-area: projects;
+    display: grid;
+    grid-template: 1fr 2fr 2fr 2fr / 1fr 1fr;
+    grid-template-areas: "title title" "one two" "three four" "five six";
+    gap: 20px;
+    padding: 10px;
+
+}
+
+.projects h3 {
+    margin-bottom: 0px;
+    display: flex;
+}
+
+.projects div {
+    border-radius: 5px;
+    background: linear-gradient(to right, goldenrod 2%, white 2%);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.projects div .top {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    padding-left: 10px;
+
+}
+
+.projects div .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 18px;
+    padding-bottom: 18px;
+    padding-right: 18px;
+}
+
+.buttons img {
+    height: 20px;
+}
+
+
+.title {
+    grid-area: title;
+}
+
+
+.one {
+    grid-area: one;
+    display: flex;
+    justify-content: space-between;
+}
+
+.two {
+    grid-area: two;
+    display: flex;
+    justify-content: space-between;
+}
+
+.three {
+    grid-area: three;
+    display: flex;
+    justify-content: space-between;
+}
+
+.four {
+    grid-area: four;
+    display: flex;
+    justify-content: space-between;
+}
+
+.five {
+    grid-area: five;
+    display: flex;
+    justify-content: space-between;
+}
+
+.six {
+    grid-area: six;
+    display: flex;
+    justify-content: space-between;
+}
+
+.announcements {
+    margin-top: 10px;
+    grid-area: announcements;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 25px;
+}
+
+.announcements h3 {
+    padding-bottom: 62px;
+}
+
+.trending {
+    grid-area: trending;
+}
+
+.trending-content {
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 25px;
+    margin-left: 15px;
+}
+
+.trending-content div{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.trending-left {
+    border: 1px solid black;
+    font-size: 6px;
+    border-radius: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trending-content div .trending-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.misc img {
+    width: 30px;
+}
+
+.misc * h5 {
+    display: flex;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.announcements-content {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+
+.announcements-content div {
+    display: table;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.announcements-content div:after {
+    border-bottom: 1px solid lightgray;
+    content: '';
+    display: block;
+    margin-left: 20%;
+    width: 60%;
+      
+}
+
+.faint {
+    color: gray;
+    font-weight: lighter;
+}
