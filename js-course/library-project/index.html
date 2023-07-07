@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <div class="title">
+        <h1>Library App</h1>
+    </div>
+    <div class="author">By Ray Ikome</div>
+
+    <button class="add">Add a book</button>
+
+    <table class="library">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Pages</th>
+            <th>Read?</th>
+        </tr>
+    </table>
+
+    <dialog>
+        <div class="top">
+            <button class="close-dialog">X</button>
+        </div>
+        <div class="bottom">
+            <form>
+                <input id="title" type="text" name="title" placeholder="Title">
+                <input id="author" type="text" name="author" placeholder="Author">
+                <input id="pages" type="number" name="pages" placeholder="Pages">
+                <div class="read">
+                    <label for="read">Read?</label>
+                    <input id="read" type="checkbox" name="read">
+                </div>
+                <input id="submit" type="submit" value="Submit">
+                
+            </form>
+        </div>
+    </dialog>
+</body>
+</html>
