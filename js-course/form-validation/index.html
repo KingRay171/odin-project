@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="form">
+        <form>
+            <div>
+                <input type="email" id="email" placeholder="Email" required>
+                <span class="email-error error" aria-live="polite"></span>
+            </div>
+            <div>
+                <input type="text" id="country" placeholder="Country" required>
+                <span class="country-error error" aria-live="polite"></span>
+            </div>
+            <div>
+                <input type="number" id="zip" placeholder="Zip Code" min="00501" max="99950" minlength="5" maxlength="5" required>
+                <span class="zip-error error" aria-live="polite"></span>
+            </div>
+            <div>
+                <input type="password" id="password" placeholder="Password" minlength="8" required>
+                <span class="pw-error error" aria-live="polite"></span>
+            </div>
+            <div>
+                <input type="password" id="passconf" placeholder="Confirm" minlength="8" required>
+                <span class="conf-error error" aria-live="polite"></span>
+            </div>
+            <div>
+                <input type="submit" id="submit" placeholder="Submit">
+            </div>
+            
+            
+        </form>
+    </div>
+</body>
+</html>
