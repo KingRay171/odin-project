@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="left">
+            <div class="Home">Home</div>
+        </div>
+        <div class="center">To-Do List</div>
+        <div class="right">
+            <div class="add">Add</div>
+            <div class="completed">Completed</div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="projects">
+            <p>Projects</p>
+        </div>
+        <div class="projects-list">
+        </div>
+        <div class="list-controls">
+            <div class="add-project">
+                <form>
+                    <input id="name" placeholder="Add a new project" type="text">
+                    <input id="create" type="submit" value="Create">
+                    <button id="delete">Delete Current</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="body">
+        <div class="body-title">
+
+        </div>
+        <div class="body-content">
+
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p class="title">Add Item</p>
+            <form>
+                <div>
+                    <input type="text" id="item-name" placeholder="Name">
+                    <input type="text" id="desc" placeholder="Description">
+                </div>
+                <div>
+                    <select id="priority" >
+                        <option value="priority">Priority</option>
+                        <option value="low">Low</option>
+                        <option value="med">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <input type="date" id="date">
+                    <input type="time" id="time">
+                    <button class="submit">Submit</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</body>
+</html>

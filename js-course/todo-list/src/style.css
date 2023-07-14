@@ -1,0 +1,141 @@
+body {
+    height: 100vh;
+    display: grid;
+    grid-template: 1fr 9fr / 1fr 4fr;
+    grid-template-areas: "header header" "sidebar body";
+}
+
+.body div {
+    border: 1px solid black;
+}
+
+.header {
+    grid-area: header;
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right {
+    display: flex;
+    gap: 18px;
+    padding-right: 18px;
+    padding-top: 10px;
+}
+
+.center {
+    padding-top: 10px;
+}
+
+.left {
+    padding-left: 18px;
+    padding-top: 10px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: rgb(29, 31, 32);
+    color: white;
+}
+
+.projects, .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    justify-content: center;
+    
+} 
+
+.projects-list :hover {
+    background-color: lightblue;
+    color: black;
+}
+
+.projects-list * {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    border-radius: 5px;
+    
+}
+
+.active {
+    background-color: lightblue;
+    color: black;
+}
+
+.hovered {
+    background-color: lightblue;
+    color: black;
+}
+
+.body {
+    grid-area: body;
+    background-color: #101314;
+}
+
+svg {
+    display: block;
+    width: 50px;
+    height: 50px;
+    fill: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    gap: 8px;
+}
+
+.selected-project {
+    background-color: lightblue;
+    color: black;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
