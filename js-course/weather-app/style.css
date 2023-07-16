@@ -1,0 +1,63 @@
+body {
+    height: 100vh;
+    background-image: url(./background.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    color: white;
+}
+
+.content {
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.opacity-change-1 {
+    opacity: 1;
+    transition: all 1s;
+}
+
+.opacity-change-2 {
+    opacity: 0;
+}
+
+.bottom {
+    display: flex;
+    gap: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 8px;
+}
+
+.temperature {
+    font-size: 5vw;
+}
+
+.textbox {
+    display: flex;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    color: red;
+}
+
+.error {
+    visibility: hidden;
+}
