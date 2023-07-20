@@ -1,0 +1,7 @@
+.education {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+}

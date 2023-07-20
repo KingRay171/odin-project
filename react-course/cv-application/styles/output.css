@@ -1,0 +1,29 @@
+.output {
+    border: 1px solid white;
+    width: 46vw;
+    
+}
+
+.personal-output, .education-output, .experience-output {
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.personal-output {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.education-title, .experience-title {
+    border-bottom: 1px solid white;
+    justify-self: center;
+    
+}
+
+.education-content, .experience-content {
+    display: flex;
+    justify-content: space-between;
+}
+

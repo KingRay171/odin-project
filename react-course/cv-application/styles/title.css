@@ -1,0 +1,8 @@
+.header {
+    height: 10vh;
+    width: 100vw;
+    background-color: gray;
+    padding-left: 10px;
+    padding-top: 3vh;
+    color: white;
+}

@@ -1,0 +1,9 @@
+.content {
+    display: flex;
+    gap: 2vw;
+    padding-top: 5vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: black;
+    color: white;
+}
