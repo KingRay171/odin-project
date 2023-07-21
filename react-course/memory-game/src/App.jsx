@@ -26,7 +26,7 @@ function App() {
   }
 
 
-  async function restart(e){
+  async function restart(){
     setGameOver(false)
     const results = []
     for(let i = 0; i < 8; i++) {
