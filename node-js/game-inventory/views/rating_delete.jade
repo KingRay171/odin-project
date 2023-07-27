@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 #{rating.name}
+  
+  p Do you really want to delete this Rating?    
+  form(method='POST' action='')
+    div.form-group
+      input#instid.form-control(type='hidden',name='instid', required='true', value=rating._id )     
+    button.btn.btn-primary(type='submit') Delete

@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 #{platform.name}
+  p= platform.description
+  
+  p Do you really want to delete this Platform?    
+  form(method='POST' action='')
+    div.form-group
+      input#instid.form-control(type='hidden',name='instid', required='true', value=platform._id )     
+    button.btn.btn-primary(type='submit') Delete

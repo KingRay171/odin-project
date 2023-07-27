@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 #{game.name}
+  p= game.description
+  
+  p Do you really want to delete this Game?    
+  form(method='POST' action='')
+    div.form-group
+      input#instid.form-control(type='hidden',name='instid', required='true', value=game._id )     
+    button.btn.btn-primary(type='submit') Delete

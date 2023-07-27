@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+  h1 Rating: #{rating.name}
+
+  div(style='margin-left:20px;margin-top:20px')
+
+    h4 Games
+
+    dl
+      each game in rating_games
+        dt
+          a(href=game.url) #{game.name}
+        dd #{game.description}
+
+      else
+        p This rating has no games
+      p
+        a(href=rating.url+'/delete') Delete rating
+      p
+        a(href=rating.url+'/update') Update rating
