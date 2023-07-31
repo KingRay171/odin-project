@@ -6,10 +6,10 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     //Only POST mothod is accepted
     if (req.method === 'POST') {
         //Getting email and password from body
-        const { email, password } = req.body;
+        const { username, password, secret } = req.body;
         console.log(req.body)
         //Validate
-        if (!email || !email.includes('@') || !password) {
+        if (!username || !password) {
             res.status(422).json({ message: 'Invalid Data' });
             return;
         }
@@ -21,7 +21,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
         //Check existing
         const checkExisting = await db
             .collection('users')
-            .findOne({ email: email });
+            .findOne({ username });
         //Send error response if duplicate user is found
         if (checkExisting) {
             res.status(422).json({ message: 'User already exists' });
@@ -30,8 +30,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
         }
         //Hash password
         const status = await db.collection('users').insertOne({
-            email,
+            username,
             password: await hash(password, 12),
+            clubMember: secret === "nido"
         });
         //Send success response
         res.status(201).json({ message: 'User created', ...status });

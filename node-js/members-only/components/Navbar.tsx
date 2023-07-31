@@ -1,5 +1,6 @@
 import {useSession} from 'next-auth/react'
 import { signIn, signOut } from 'next-auth/react'
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 export default function MainNavigation() {
@@ -13,9 +14,14 @@ export default function MainNavigation() {
             <nav>
                 <ul>
                     {status !== "authenticated" && (
+                        <>
                         <li>
                             <button onClick={() => {signIn()}}>Login</button>
                         </li>
+                        <li>
+                            <Link href="/signup">Sign Up</Link>
+                        </li>
+                        </>
                     )}
                     {status !== "unauthenticated" && (
                         <li>
