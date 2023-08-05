@@ -1,0 +1,22 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: center;
+    margin-right: 2vw;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-left: 2vw;
+}
+
+h2 {
+    margin: 0;
+}
