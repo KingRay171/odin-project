@@ -1,0 +1,51 @@
+body {
+	font-family: sans-serif;
+	text-align: center;
+	margin: auto;
+}
+
+.container {
+	height: 100vh;
+	display: grid;
+	grid-template-areas: "sidebar header header header" "sidebar content content content" "sidebar content content content" "sidebar content content content";
+}
+
+.sidebar {
+	grid-area: sidebar;
+	border: 1px solid lightblue;
+}
+
+.header {
+	grid-area: header;
+	border: 1px solid lightblue;
+}
+
+.content {
+	grid-area: content;
+	border: 1px solid lightblue;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.chatbox {
+	background-color: darkgray;
+	height: 70%;
+	width: 90%;
+	overflow: hidden auto;
+}
+
+.name {
+	border-radius: 10px 10px 0px 0px;
+	background-color: deepskyblue;
+	height: 10%;
+	width: 90%;
+}
+
+.send {
+	border-radius: 0px 0px 10px 10px;
+	background-color: black;
+	height: 10%;
+	width: 90%;
+}
