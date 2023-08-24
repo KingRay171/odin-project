@@ -1,8 +1,5 @@
 use crate::error_template::{AppError, ErrorTemplate};
 
-#[cfg(feature = "ssr")]
-use crate::structs::AggregatedUser;
-
 use leptos::{ev::SubmitEvent, html::Input, *};
 
 use bson::oid::ObjectId;
@@ -148,8 +145,7 @@ pub async fn sign_up(cx: Scope, payload: AuthPayload) -> Result<(), ServerFnErro
 }
 
 #[server(IsSignedIn, "/api")]
-pub async fn is_signed_in(cx: Scope) -> Result<AggregatedUser, ServerFnError> {
-    use crate::structs::{AggregatedUser, User};
+pub async fn is_signed_in(cx: Scope) -> Result<Option<AggregatedUser>, ServerFnError> {
     use futures::stream::StreamExt;
     use jsonwebtoken::{decode, Algorithm, DecodingKey, Validation};
     use leptos_axum::RequestParts;
@@ -166,7 +162,7 @@ pub async fn is_signed_in(cx: Scope) -> Result<AggregatedUser, ServerFnError> {
             .to_str()
             .map_err(|_| ServerFnError::Serialization("Header contains invalid chars".to_owned()))?
             .split("jwt=")
-            .next()
+            .nth(1)
             .ok_or(ServerFnError::ServerError(
                 "Could not access request header".to_owned(),
             ))?
@@ -218,7 +214,7 @@ pub async fn is_signed_in(cx: Scope) -> Result<AggregatedUser, ServerFnError> {
     ))
     .map_err(|_| ServerFnError::ServerError("Invalid username or password".to_owned()))?;
 
-    Ok(user)
+    Ok(Some(user))
 }
 
 #[component]
@@ -310,13 +306,14 @@ fn HomePage(cx: Scope) -> impl IntoView {
         || (),
         move |_| async move { is_signed_in(cx).await.unwrap() },
     );
-
     view! { cx,
             <Suspense fallback=move || view! { cx, <p>"Loading..."</p> } >
             {move || {
                 match once.read(cx) {
-                    Some(true) => {
-                        view! {cx, <div class="container">
+                    Some(user) => {
+                        match user {
+                            Some(agg_user) => {
+                                view! {cx, <div class="container">
                                     <div class="sidebar">
                                     </div>
                                     <div class="header"></div>
@@ -325,16 +322,20 @@ fn HomePage(cx: Scope) -> impl IntoView {
                                         <div class="chatbox"></div>
                                         <div class="send"></div>
                                     </div>
+                                    <div>{agg_user.username}</div>
 
                                 </div>
+                                }
+                            }
+                            None => {
+                                view! {cx,
+                                    <div>
+                                        <Redirect path="/signin" />
+                                    </div>
+                                }
+                            }
                         }
-                    }
-                    Some(false) => {
-                        view! {cx,
-                            <div>
-                                <Redirect path="/signin" />
-                            </div>
-                        }
+                        
                     }
                     None => {
                         view! {cx, <div><p>"Loading..."</p></div>}
